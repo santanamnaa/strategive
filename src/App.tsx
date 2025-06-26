@@ -8,20 +8,29 @@ import Advantages from './components/Advantages';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
+import Careers from './components/Careers';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="min-h-screen bg-sage-50">
-      <Header />
-      <Hero />
-      <WhyImportant />
-      <Packages />
-      <WhyChooseUs />
-      <Advantages />
-      <Portfolio/>
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/" element={
+          <div className="min-h-screen bg-sage-50">
+            <Header />
+            <Hero />
+            <WhyImportant />
+            <Packages />
+            <WhyChooseUs />
+            <Advantages />
+            <Portfolio/>
+            <Contact />
+            <Footer />
+          </div>
+        } />
+      </Routes>
+    </Router>
   );
 }
 
