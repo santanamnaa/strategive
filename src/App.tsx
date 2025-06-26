@@ -8,7 +8,7 @@ import Advantages from './components/Advantages';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
-import Careers from './components/Careers';
+import Careers from './pages/careers/page';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
